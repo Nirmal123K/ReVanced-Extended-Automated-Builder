@@ -25,7 +25,7 @@ jobs:
       - name: Get latest release from inotia00/revanced-patches
         id: latest-release
         run: |
-          LATEST_RELEASE=$(curl -s https://api.github.com/repos/inotia00/revanced-patches/releases/latest | jq -r '.tag_name')
+          LATEST_RELEASE=$(curl -s https://api.github.com/repos/anddea/revanced-patches/releases/latest | jq -r '.tag_name')
           if [ "$LATEST_RELEASE" == "null" ]; then
             echo "Couldn't fetch latest release. Workflow halted!"
             exit 0
